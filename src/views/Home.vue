@@ -11,7 +11,7 @@
               </div>
               <div class="col-lg-6">
                 <div class="banner_content">
-                  <h5>This is me</h5>
+                  <h5>This is me dfsd</h5>
                   <h2>Travor James</h2>
                   <p>You will begin to realise why this exercise is called the Dickens Pattern (with reference to the ghost showing Scrooge some different futures)</p>
                   <a href="#" class="genric-btn success circle arrow">Discover Now<span class="lnr lnr-arrow-right"></span></a>
