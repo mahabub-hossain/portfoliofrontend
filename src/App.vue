@@ -1,13 +1,38 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <port-header/>
     <router-view/>
+     <port-footer/>
   </div>
 </template>
+<script>
+import header from './views/Header.vue'
+import footer from './views/Footer.vue'
 
+export default {
+  name:'App',
+  components:{
+      'port-header':header,
+      'port-footer':footer,
+    },
+}
+    $(document).ready(function(){
+        var nav_offset_top = $('header').height() + 50;
+        function navbarFixed(){
+          if ( $('.header_area').length ){ 
+              $(window).scroll(function() {
+                  var scroll = $(window).scrollTop()   
+                  if (scroll >= nav_offset_top ) {
+                      $(".header_area").addClass("navbar_fixed")
+                  } else {
+                      $(".header_area").removeClass("navbar_fixed")
+                  }
+              })
+          }
+      }
+      navbarFixed()
+    })
+</script>
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
